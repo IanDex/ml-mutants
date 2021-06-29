@@ -6,6 +6,11 @@ from functions import is_mutant
 app = Flask(__name__)
 
 
+@app.route('/')
+def home():
+    return 'Home'
+
+
 @app.route('/mutant/', methods=['POST'])
 def mutant():
     json_data = request.json
